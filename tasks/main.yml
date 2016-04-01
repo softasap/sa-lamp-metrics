@@ -1,0 +1,13 @@
+---
+# tasks file for sa-lamp-metrics
+  - include: phpcs.yml
+    when: option_phpcs
+
+  - include: phpmd.yml
+    when: option_phpmd
+
+  - include: phploc.yml
+    when: option_phploc
+
+  - include: phpdox.yml
+    when: option phpdox

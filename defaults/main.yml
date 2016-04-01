@@ -1,0 +1,7 @@
+---
+# defaults file for sa-lamp-metrics
+
+option_phpmd: true
+option_phpcs: true
+option_phploc: true
+option_phpdox: true
