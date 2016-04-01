@@ -10,4 +10,4 @@
     when: option_phploc
 
   - include: phpdox.yml
-    when: option phpdox
+    when: option_phpdox
