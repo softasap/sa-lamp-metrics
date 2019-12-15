@@ -4,10 +4,12 @@
     ignore_errors: yes
     changed_when: False
     register: phpmd_present
-    tags: phpmd
+    tags:
+      - phpmd
+      - skip_ansible_lint
 
   - name: PHPMD | Download phploc distribution
-    get_url: url="http://static.phpmd.org/php/latest/phpmd.phar"
+    get_url: url="https://github.com/phpmd/phpmd/releases/download/{{ phpmd_version | default('2.7.0') }}/phpmd.phar"
              dest="/tmp/phpmd.phar"
     when: phpmd_present is failed
     tags: phpmd

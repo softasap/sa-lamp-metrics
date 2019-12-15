@@ -6,5 +6,6 @@ option_phpcs: true
 option_phploc: true
 option_phpdox: true
 
-phpcs_version: 2.5.1
-phpcbf_version: 2.5.1
+phpcs_version: "3.5.3"
+phpcbf_version: "3.5.3"
+phpmd_version: "2.7.0"
