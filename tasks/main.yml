@@ -1,13 +1,13 @@
 ---
 # tasks file for sa-lamp-metrics
-  - include: phpcs.yml
+  - include_tasks: phpcs.yml
     when: option_phpcs
 
-  - include: phpmd.yml
+  - include_tasks: phpmd.yml
     when: option_phpmd
 
-  - include: phploc.yml
+  - include_tasks: phploc.yml
     when: option_phploc
 
-  - include: phpdox.yml
+  - include_tasks: phpdox.yml
     when: option_phpdox
