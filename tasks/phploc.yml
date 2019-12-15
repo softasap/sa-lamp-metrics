@@ -4,7 +4,9 @@
     ignore_errors: yes
     changed_when: False
     register: phploc_present
-    tags: phploc
+    tags:
+      - phploc
+      - skip_ansible_lint
 
   - name: PHPLOC | Download phploc distribution
     get_url: url="https://phar.phpunit.de/phploc.phar"

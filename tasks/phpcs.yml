@@ -4,7 +4,9 @@
     ignore_errors: yes
     changed_when: False
     register: phpcs_present
-    tags: phpcs
+    tags:
+      - phpcs
+      - skip_ansible_lint
 
   - name: PHPCS | Download phpcs distribution
     get_url: url="https://github.com/squizlabs/PHP_CodeSniffer/releases/download/{{ phpcs_version }}/phpcs.phar"
@@ -29,8 +31,11 @@
   - name: PHPCBF | Check if phpcbf is present
     shell: test -x /usr/local/bin/phpcbf
     ignore_errors: yes
+    changed_when: False
     register: phpcbf_present
-    tags: phpcbf
+    tags:
+      - phpcbf
+      - skip_ansible_lint
 
   - name: PHPCBF | Download phpcbf distribution
     get_url: url="https://github.com/squizlabs/PHP_CodeSniffer/releases/download/{{ phpcbf_version }}/phpcbf.phar"

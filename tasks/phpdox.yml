@@ -4,7 +4,9 @@
     ignore_errors: yes
     changed_when: False
     register: phpdox_present
-    tags: phpdox
+    tags:
+      - phpdox
+      - skip_ansible_lint
 
   - name: PHPDOX | Install dependencies
     apt: pkg={{ item }} state=present force="yes"  update_cache="yes"
